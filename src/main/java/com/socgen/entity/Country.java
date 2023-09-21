@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import java.time.LocalDateTime;
+
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
@@ -21,5 +23,8 @@ public class Country {
     private String capital;
 
     @Column(nullable = false)
-    private String population;
+    private Integer population;
+
+    @Column(nullable = false, name = "UPDATE_TIME")
+    private LocalDateTime updateTime;
 }
